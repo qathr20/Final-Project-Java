@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "eb3a05e7-de7f-491a-b529-4c5fbab55f7c",
+		"name": "FINAL PROJECT BUS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"akun6\",\r\n    \"email\":\"akun6@gmail.com\",\r\n    \"firstName\":\"akun\",\r\n    \"lastName\":\"enam\",\r\n    \"mobileNumber\":\"08666666666\",\r\n    \"role\":[\"ROLE_ADMIN\", \"ROLE_USER\"],\r\n    \"password\":\"666666\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/user/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth_login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3VuNCIsImlhdCI6MTY1NzAzMjI0NywiZXhwIjoxNjU3MTE4NjQ3fQ.ZFVosSHi2QNlqEJYjGF-vi7Qj3w8bgn1gi5Ox1TjrPP2NgFfT9W2lJ8JL60Tk4yX_g9f4DXTlFBMC6LPfo6bwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"akun4\",\r\n    \"password\": \"444444\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUserById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxYXRocmluMjAwNSIsImlhdCI6MTY1Njg0MDM5NCwiZXhwIjoxNjU2OTI2Nzk0fQ.mzKbqj4yIjsj4aKqwcDiRRx5y6JnKWgAskwu8SvWYewnqU1ig2oB2_jSOccLlby1PdvZNisXXCwIA2sVLgh9bQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/user/users/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3VuNCIsImlhdCI6MTY1NzAzMjI0NywiZXhwIjoxNjU3MTE4NjQ3fQ.ZFVosSHi2QNlqEJYjGF-vi7Qj3w8bgn1gi5Ox1TjrPP2NgFfT9W2lJ8JL60Tk4yX_g9f4DXTlFBMC6LPfo6bwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/user/users/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"akun2\",\r\n    \"password\": \"222222\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3VuMiIsImlhdCI6MTY1NzAzMzE4OSwiZXhwIjoxNjU3MTE5NTg5fQ._o2HIarhM5crAKsLt7FpmXAD9ckxdvBqXfSbGnb_xmOUADMuIkycnao_ftTzE1htn_3AFVBgFgh4Fx6i70PyZQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"akun\",\r\n  \"lastName\": \"duaa\",\r\n  \"mobileNumber\": \"082222222222\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/user/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
